@@ -1,0 +1,73 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <PackageIcon></PackageIcon>
+    <ApplicationIcon>picture\LiuYingLogo.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="app.manifest" />
+    <None Remove="background.png" />
+    <None Remove="close.png" />
+    <None Remove="HuangquanLogo.png" />
+    <None Remove="install.png" />
+    <None Remove="LiuYingLogo.png" />
+    <None Remove="logo.jpg" />
+    <None Remove="logo.png" />
+    <None Remove="option.png" />
+    <None Remove="smaller.png" />
+    <None Remove="start.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <COMReference Include="IWshRuntimeLibrary">
+      <WrapperTool>tlbimp</WrapperTool>
+      <VersionMinor>0</VersionMinor>
+      <VersionMajor>1</VersionMajor>
+      <Guid>f935dc20-1cf0-11d0-adb9-00c04fd58a0b</Guid>
+      <Lcid>0</Lcid>
+      <Isolated>false</Isolated>
+      <EmbedInteropTypes>true</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="picture\LiuYingLogo.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="Newtonsoft.Json.Bson" Version="1.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="background.png" />
+    <Resource Include="close.png" />
+    <Resource Include="HuangquanLogo.png" />
+    <Resource Include="install.png" />
+    <Resource Include="LiuYingLogo.png" />
+    <Resource Include="logo.jpg" />
+    <Resource Include="logo.png" />
+    <Resource Include="option.png" />
+    <Resource Include="smaller.png" />
+    <Resource Include="start.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="picture\LiuYingLogo.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Update="picture\logo.jpg">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>

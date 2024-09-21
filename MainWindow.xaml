@@ -1,0 +1,77 @@
+﻿<Window x:Name="mainWindows" x:Class="StarRailLauncher.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:StarRailLauncher"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="720" Width="1280" WindowStyle="None" 
+        Foreground="{x:Null}" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize" 
+        Icon="/LiuYingLogo.png">
+    <Window.Background>
+        <ImageBrush x:Name="ImageBackGround" ImageSource="/background.png" Stretch="UniformToFill"/>
+    </Window.Background>
+    <Grid Height="720" Width="1280">
+        <Border x:Name="BTitle" Height="40" VerticalAlignment="Top" MouseDown="BTitle_MouseDown" Background="#00000000">
+            <Grid>
+                <Button Template="{DynamicResource BSettingTemplate}" x:Name="BSettings" BorderBrush="{x:Null}" Padding="5,5,5,5" Click="BSettings_Click" Width="30" HorizontalAlignment="Left" Margin="1143,5,0,5" Foreground="{x:Null}">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/install.png"/>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="BMinimize" HorizontalAlignment="Left" VerticalAlignment="Center" BorderBrush="{x:Null}" Click="BMinimize_Click" Padding="5,5,5,5" Width="30" Height="30" Margin="1191,0,0,0" Template="{DynamicResource BSettingTemplate}">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/smaller.png"/>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="BClose" BorderBrush="{x:Null}" Click="BClose_Click" Padding="5,5,5,5" Margin="1236,5,14,5" Width="30" Template="{DynamicResource BSettingTemplate}">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/close.png"/>
+                    </Button.Background>
+                </Button>
+            </Grid>
+        </Border>
+        <Button x:Name="BStart" Content="开始游戏" HorizontalAlignment="Left" Margin="787,534,0,0" VerticalAlignment="Top" Height="87" Width="240" Foreground="White" FontSize="24" BorderBrush="White" Template="{DynamicResource BStartTemplate}" MouseEnter="BStart_MouseEnter" MouseLeave="BStart_MouseLeave" Background="{x:Null}" Click="BStart_Click"/>
+        <Button x:Name="BOption" HorizontalAlignment="Left" Margin="1063,534,0,0" VerticalAlignment="Top" Height="87" RenderTransformOrigin="-0.684,1.288" Width="87" Background="{x:Null}" Foreground="White" BorderBrush="White" Template="{DynamicResource BOptionComplate}" Click="BOption_Click" MouseEnter="BOption_MouseEnter" MouseLeave="BOption_MouseLeave">
+        </Button>
+
+        <Grid x:Name="GOption" Margin="0,0,130,200" Width="120" Height="160" VerticalAlignment="Bottom" HorizontalAlignment="Right" Visibility="Collapsed" MouseLeave="GOption_MouseLeave">
+            <StackPanel Grid.Row="4">
+                <Button x:Name="BRevisewallpaper" Content="更改壁纸" HorizontalAlignment="Center" VerticalAlignment="Top" Height="38" Width="120" FontSize="14" FontFamily="SimHei" BorderBrush="#CCFFFFFF" Click="BRevisewallpaper_Click">
+                    <Button.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop/>
+                            <GradientStop Color="#33FFFEFE" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="BOpenGamePath" Content="打开游戏路径" HorizontalAlignment="Center" VerticalAlignment="Top" Height="38" Width="120" FontSize="14" FontFamily="SimHei" BorderBrush="#CCFFFFFF" Click="BOpenGamePath_Click">
+                    <Button.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#33FFFFFF"/>
+                            <GradientStop Color="#59FFFFFF" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="BAddShortCut" Content="添加快捷方式" HorizontalAlignment="Center" VerticalAlignment="Top" Height="38" Width="120" FontSize="14" FontFamily="SimHei" BorderBrush="#CCFFFFFF">
+                    <Button.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="Black"/>
+                            <GradientStop Color="#7FFFFFFF" Offset="1"/>
+                            <GradientStop Color="#59FFFFFF" Offset="0"/>
+                        </LinearGradientBrush>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="BModManagement" Content="Mod管理器" HorizontalAlignment="Center" VerticalAlignment="Top" Height="38" Width="120" FontSize="14" FontFamily="SimHei" BorderBrush="#CCFFFFFF" Click="BModManagement_Click">
+                    <Button.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#7FFFFFFF"/>
+                            <GradientStop Color="#B2FFFFFF" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Button.Background>
+                </Button>
+            </StackPanel>
+        </Grid>
+        <Frame x:Name="SettingFrame"  Margin="470,45,10,225" Width="800" Height="450"/>
+    </Grid>
+</Window>
