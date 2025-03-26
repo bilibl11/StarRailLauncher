@@ -25,6 +25,7 @@ namespace StarRailLauncher
     public partial class SettingPage : Page
     {
         MainWindow mainWindow = new();
+        private static string ModBananaURL = "https://gamebanana.com/search?_sModelName=Mod&_sOrder=date&_sSearchString=star+rail&_idGameRow=18366";
 
         private void ShowLoacation()
         {
@@ -38,6 +39,8 @@ namespace StarRailLauncher
             InitializeComponent();
 
             ShowLoacation();
+
+            this.ModBananaURLTextBox.Text = "https://gamebanana.com";
         }
 
         private void Close()
@@ -91,9 +94,9 @@ namespace StarRailLauncher
             Process.Start(new ProcessStartInfo(url) { UseShellExecute = true });
         }
 
-        private void OpenMiyousheURL_Click(object sender, RoutedEventArgs e)
+        private void OpenModBananaURL_Click(object sender, RoutedEventArgs e)
         {
-            string url = this.MiyousheURLTextBox.Text;
+            string url = ModBananaURL;
             Process.Start(new ProcessStartInfo(url) { UseShellExecute = true });
         }
     }
