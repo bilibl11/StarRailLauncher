@@ -18,4 +18,7 @@
 </p>
 
 ## 下载方式
+点击Release，下载StarRailLauncher.zip并解压缩，点击StarRailLauncher.exe即可运行。
 
+## 其他
+壁纸引用：[https://steamcommunity.com/sharedfiles/filedetails/?id=3135987359](https://steamcommunity.com/sharedfiles/filedetails/?id=3135987359)
