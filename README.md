@@ -8,4 +8,14 @@
 <p>此外，该启动器也具有打开Mod管理器的功能（需要绑定文件路径）</p>
 
 ## 页面展示
-主界面：
+<p>
+<b>主界面：</b>
+  <img src="https://github.com/user-attachments/assets/14f56ed3-b78d-4297-9934-274239b8f477">
+</p>
+<p>
+<b>设置界面：</b>
+  <img src="https://github.com/user-attachments/assets/176bab6a-41b9-4e48-81c3-99ce9b97d858">
+</p>
+
+## 下载方式
+
