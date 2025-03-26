@@ -20,5 +20,9 @@
 ## 下载方式
 点击Release，下载StarRailLauncher.zip并解压缩，点击StarRailLauncher.exe即可运行。
 
+# 游戏路径定位
+游戏路径在Star Rail文件夹中的Game文件夹里的StarRail.exe
+3dmigoto路径定位到3DMigotoLoader.exe文件
+
 ## 其他
 壁纸引用：[https://steamcommunity.com/sharedfiles/filedetails/?id=3135987359](https://steamcommunity.com/sharedfiles/filedetails/?id=3135987359)
