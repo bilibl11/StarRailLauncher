@@ -26,12 +26,28 @@ namespace StarRailLauncher
     {
         MainWindow mainWindow = new();
         private static string ModBananaURL = "https://gamebanana.com/search?_sModelName=Mod&_sOrder=date&_sSearchString=star+rail&_idGameRow=18366";
+        private const int TextBoxShowMax = 50;
 
         private void ShowLoacation()
         {
             GamePathTextBox.Text = MainWindow.PathData.gameExePath;
             ModTextBox.Text = MainWindow.PathData.modExePath;
             ModManagerTextBox.Text = MainWindow.PathData.modManagerExePath;
+            if (GamePathTextBox.Text.Length > TextBoxShowMax)
+            {
+                string trimmedText = GamePathTextBox.Text.Substring(0, TextBoxShowMax) + "...";
+                GamePathTextBox.Text = trimmedText;
+            }
+            if (ModTextBox.Text.Length > TextBoxShowMax)
+            {
+                string trimmedText = ModTextBox.Text.Substring(0, TextBoxShowMax) + "...";
+                ModTextBox.Text = trimmedText;
+            }
+            if (ModManagerTextBox.Text.Length > TextBoxShowMax)
+            {
+                string trimmedText = ModManagerTextBox.Text.Substring(0, TextBoxShowMax) + "...";
+                ModManagerTextBox.Text = trimmedText;
+            }
         }
 
         public SettingPage()
@@ -98,6 +114,24 @@ namespace StarRailLauncher
         {
             string url = ModBananaURL;
             Process.Start(new ProcessStartInfo(url) { UseShellExecute = true });
+        }
+
+        private void RemakeGamePath_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow.PathData.gameExePath = "";
+            GamePathTextBox.Text = "";
+        }
+
+        private void Remake3dPath_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow.PathData.modExePath = "";
+            ModTextBox.Text = "";
+        }
+
+        private void RemakeModManagerPath_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow.PathData.modManagerExePath = "";
+            ModManagerTextBox.Text = "";
         }
     }
 }

@@ -134,16 +134,13 @@ namespace StarRailLauncher
         
         private async void BStart_Click(object sender, RoutedEventArgs e)
         {
-            if (Mod.StartMod())
+            if (MainWindow.PathData.modExePath != null && MainWindow.PathData.modExePath != "")
             {
+                Mod.StartMod();
                 await Task.Delay(1000);
-                Game.StartGame();
-                WindowState = WindowState.Minimized;
             }
-            else
-            {
-                Debug.WriteLine("Mod启动失败!");
-            }
+            Game.StartGame();
+            WindowState = WindowState.Minimized;
         }
 
         private void BOption_Click(object sender, RoutedEventArgs e)
